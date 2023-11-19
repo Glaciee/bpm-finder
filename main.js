@@ -25,7 +25,7 @@ buttonStart.addEventListener('click',() => {
 	numberOfProcess++;
   num.innerHTML = numberOfProcess;
   if (numberOfProcess != 1){
-  bpm_per_note.push(numberOfProcess * 60 / ((totaltime - totaltime2) / 100));
+  bpm_per_note.push(60 / ((totaltime - totaltime2) / 100));
   time_btwn_note.push(totaltime - totaltime2);
   }
   instantbpm.innerHTML = numberOfProcess * 60 / (totaltime / 100);
@@ -37,8 +37,7 @@ buttonStart.addEventListener('click',() => {
   
 buttonStop.addEventListener('click',() => {
   clearInterval(Interval);
-  let len = time_per_note.length;
-  avgbpm = (totaltime / 100) * 60 / numberOfProcess;
+  avgbpm = (totaltime / 100) * 60 / (numberOfProcess - 1);
 	  
 });
 
