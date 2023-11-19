@@ -1,1 +1,46 @@
+/* Variabes */  
+$orange: #ffa600;
+$grey:#f3f3f3;
+$white: #fff;
+
+$base-color:#3d615c;
+
+body {
+background: $base-color;
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+height: 100%;
+}
+
+.wrapper {
+width: 800px;
+margin: 30px auto;
+color: $white;
+text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+}
+
+
+button{
+background: $base-color;
+color: $white;
+border: solid 1px $white;
+text-decoration: none;
+cursor: pointer;
+font-size: 1.2em;
+padding: 18px 10px;
+width: 180px;
+margin: 10px;
+ outline: none;
+  &:hover{
+	background: $white;
+	border: solid 1px $white;
+	color: $base-color;
+	}
+}
 
