@@ -6,7 +6,7 @@ let totaltime2 = 0;
 let Interval ;
 let avgbpm;
 let time_btwn_note = [];
-let bpm_btwn_note = [];
+let bpm_per_note = [];
 
 const num = document.querySelector('.num');
 const buttonStart = document.getElementById('button-start');
@@ -25,7 +25,7 @@ buttonStart.addEventListener('click',() => {
 	numberOfProcess++;
   num.innerHTML = numberOfProcess;
   if (numberOfProcess != 1){
-  bpm_btwn_note.push(numberOfProcess * 60 / ((totaltime - totaltime2) / 100));
+  bpm_per_note.push(numberOfProcess * 60 / (totaltime / 100));
   time_btwn_note.push(totaltime - totaltime2);
   }
   instantbpm.innerHTML = numberOfProcess * 60 / (totaltime / 100);
