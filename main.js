@@ -5,6 +5,8 @@ let totaltime = 0;
 let totaltime2 = 0;
 let Interval ;
 let avgbpm;
+let time_btwn_note = [];
+let bpm_btwn_note = [];
 
 const num = document.querySelector('.num');
 const buttonStart = document.getElementById('button-start');
@@ -13,8 +15,6 @@ const buttonReset = document.getElementById('button-reset');
 const appendTens = document.getElementById("tens");
 const appendSeconds = document.getElementById("seconds");
 const instantbpm = document.getElementById("instantbpm");
-const time_btwn_note = [];
-const bpm_btwn_note = [];
 
 const clickHandler = () => {
   numberOfProcess++;
@@ -52,6 +52,9 @@ buttonReset.onclick = () => {
   numberOfProcess = 0;
   instantbpm.innerHTML = 0;
   totaltime = 0;
+  time_btwn_note.length = 0;
+  bpm_btwn_note.length = 0;
+  
 }
   
 function startTimer () {
