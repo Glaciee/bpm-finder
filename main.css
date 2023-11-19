@@ -5,8 +5,12 @@ $white: #fff;
 
 $base-color:#3d615c;
 
+html {
+background-image: url('https://media.discordapp.net/attachments/1175492162541072404/1175846206157619330/blue_green.jpg?ex=656cb71d&is=655a421d&hm=9df54dae092d9f952e5bb34cbae9676090bd165999263ea9624ef6ada403cc25&=&width=968&height=662');  
+  }
+
 body {
-background: $base-color;
+background-image: url('https://media.discordapp.net/attachments/1175492162541072404/1175846206157619330/blue_green.jpg?ex=656cb71d&is=655a421d&hm=9df54dae092d9f952e5bb34cbae9676090bd165999263ea9624ef6ada403cc25&=&width=968&height=662');
 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 height: 100%;
 }
@@ -26,8 +30,9 @@ h1, h2, h3 {
 }
 
 
-button{
+#button-start{
 background: $base-color;
+background-image: url('https://media.discordapp.net/attachments/1175492162541072404/1175846206157619330/blue_green.jpg?ex=656cb71d&is=655a421d&hm=9df54dae092d9f952e5bb34cbae9676090bd165999263ea9624ef6ada403cc25&=&width=968&height=662');
 color: $white;
 border: solid 1px $white;
 text-decoration: none;
@@ -43,4 +48,62 @@ margin: 10px;
 	color: $base-color;
 	}
 }
+
+#button-stop{
+background: $base-color;
+background-image: url('https://cdn.discordapp.com/attachments/1175492162541072404/1175846206539313212/Greenblue.jpg?ex=656cb71d&is=655a421d&hm=964eb2bb55470f936b05e1c983c4277d3d6f9db60a1870d4d064d99e6cb4acae&');
+color: $white;
+border: solid 1px $white;
+text-decoration: none;
+cursor: pointer;
+font-size: 1.2em;
+padding: 18px 10px;
+width: 180px;
+margin: 10px;
+ outline: none;
+  &:hover{
+	background: $white;
+	border: solid 1px $white;
+	color: $base-color;
+	}
+}
+
+#button-reset{
+background: $base-color;
+background-image: url('https://cdn.discordapp.com/attachments/1175492162541072404/1175846206837116969/ORANGE_BLUE.jpg?ex=656cb71d&is=655a421d&hm=1738c73b7fca92e850b6138e66bcdfa628b6a14933d753665d711b100246ef4e&');
+color: $white;
+border: solid 1px $white;
+text-decoration: none;
+cursor: pointer;
+font-size: 1.2em;
+padding: 18px 10px;
+width: 180px;
+margin: 10px;
+ outline: none;
+  &:hover{
+	background: $white;
+	border: solid 1px $white;
+	color: $base-color;
+	}
+}
+
+#myGrapher{
+background: $base-color;
+background-image: url('https://cdn.discordapp.com/attachments/1175492162541072404/1175846207252332655/purple_orange.jpg?ex=656cb71d&is=655a421d&hm=ec4de70395b98d74eea92ee74d2e033c5d85790b0e40ba6b136b77547a865d87&');
+color: $white;
+border: solid 1px $white;
+text-decoration: none;
+cursor: pointer;
+font-size: 1.2em;
+padding: 18px 10px;
+width: 180px;
+margin: 10px;
+ outline: none;
+  &:hover{
+	background: $white;
+	border: solid 1px $white;
+	color: $base-color;
+	}
+}
+
 
