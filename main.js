@@ -1,6 +1,5 @@
 let numberOfProcess = 0;
 
-const add = document.getElementById('myClickButton');
 const num = document.querySelector('.num');
 let seconds = 0; 
 let tens = 0; 
@@ -26,7 +25,7 @@ buttonStart.addEventListener('click', function() {
 buttonStop.addEventListener('click', function() {
   clearInterval(Interval);
 });
-  
+ 
   function startTimer () {
     tens++; 
     
@@ -54,4 +53,3 @@ buttonStop.addEventListener('click', function() {
   }
   
 add.addEventListener('click', clickHandler);
-
