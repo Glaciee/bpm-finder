@@ -25,7 +25,7 @@ buttonStart.addEventListener('click',() => {
 	numberOfProcess++;
   num.innerHTML = numberOfProcess;
   if (numberOfProcess != 1){
-  bpm_per_note.push(numberOfProcess * 60 / (totaltime / 100));
+  bpm_per_note.push(numberOfProcess * 60 / ((totaltime - totaltime2) / 100));
   time_btwn_note.push(totaltime - totaltime2);
   }
   instantbpm.innerHTML = numberOfProcess * 60 / (totaltime / 100);
