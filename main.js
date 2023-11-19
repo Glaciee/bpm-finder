@@ -2,6 +2,7 @@ let numberOfProcess = 0;
 let seconds = 0; 
 let tens = 0;
 let totaltime = 0;
+let totaltime2 = 0;
 let Interval ;
 let avgbpm;
 
@@ -11,6 +12,7 @@ const buttonStop = document.getElementById('button-stop');
 const buttonReset = document.getElementById('button-reset');
 const appendTens = document.getElementById("tens");
 const appendSeconds = document.getElementById("seconds");
+const instantbpm = document.getElementById("instantbpm");
 const time_btwn_note = [];
 const bpm_btwn_note = [];
 
@@ -22,19 +24,20 @@ const clickHandler = () => {
 buttonStart.addEventListener('click',() => {
 	numberOfProcess++;
   num.innerHTML = numberOfProcess;
-  time_btwn_note.push(Interval);
-  bpm_btwn_note.push(60 / (Interval / 100));
+  if (numberOfProcess != 1){
+  bpm_btwn_note.push(numberOfProcess * 60 / (totaltime / 100));
+  time_btwn_note.push(totaltime - totaltime2);
+  }
+  instantbpm.innerHTML = numberOfProcess * 60 / (totaltime / 100);
   clearInterval(Interval);
   Interval = setInterval(startTimer, 10);
+  totaltime2 = totaltime
   
 });
   
 buttonStop.addEventListener('click',() => {
   clearInterval(Interval);
   let len = time_per_note.length;
-  for (let i = 0; i < len; i++) {
-	  totaltime += time_btwn_note[i];
-  }
   avgbpm = (totaltime / 100) * 60 / numberOfProcess;
 	  
 });
@@ -47,10 +50,13 @@ buttonReset.onclick = () => {
   appendSeconds.innerHTML = seconds;
   num.innerHTML = 0;
   numberOfProcess = 0;
+  instantbpm.innerHTML = 0;
+  totaltime = 0;
 }
   
 function startTimer () {
 	tens++; 
+  totaltime++;
     
   if(tens <= 9){
   	appendTens.innerHTML = "0" + tens;
